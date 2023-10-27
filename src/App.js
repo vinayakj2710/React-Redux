@@ -13,7 +13,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <Auth />
+      {!isAuthenticated && <Auth />}
       {isAuthenticated && <UserProfile />}
       <Counter />
     </Fragment>
